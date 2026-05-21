@@ -16,6 +16,10 @@ env:
   FIRMWARE_TAG: JDCloud
   TZ: Asia/Shanghai
 
+permissions:
+  contents: write  # 创建 Release 和上传 artifacts 需要此权限
+  actions: write   # 删除缓存和工作流需要此权限
+
 jobs:
   Build:
     runs-on: ubuntu-24.04
